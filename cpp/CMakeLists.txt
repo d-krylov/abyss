@@ -22,7 +22,8 @@ FetchContent_MakeAvailable(
 add_clang_format_target(format "build")
 
 add_subdirectory(bvh)
-
+add_subdirectory(kdtree)
+add_subdirectory(ADS)
 
 
 

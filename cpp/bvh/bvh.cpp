@@ -85,7 +85,6 @@ struct Triangle {
 };
 
 struct BVHNode {
-  BVHNode() = default;
 
   BVHNode(std::span<Face> primitives, std::span<const Vector3f> vertices) : primitives_(primitives) {
     for (const auto &primitive : primitives_) {
@@ -190,7 +189,7 @@ int main(int argc, char **argv) {
   auto vertices = GetMeshVertices(reader);
   auto faces = GetMeshFaces(reader);
 
-  BVH bvh(vertices, faces, 900);
+  BVH bvh(vertices, faces, 20);
 
   bvh.Build();
 
